@@ -30,7 +30,7 @@
                     <td>{{ $lesson->name }}</td>
                     <td>{{ $lesson->task->name }}</td>
                     <td>
-                        <a href="" class="btn btn-info">{{ trans('lesson.show') }}</a>
+                        <a href="{{ route('lessons.show', [$lesson->id]) }}" class="btn btn-info">{{ trans('lesson.show') }}</a>
                         <a href="" class="btn btn-primary">{{ trans('lesson.edit') }}</a>
                         <form action="" method="post">
                             <input class="btn btn-danger" type="submit" value="{{ trans('lesson.delete') }}"/>
