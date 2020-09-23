@@ -10,6 +10,7 @@
         'action' => 'Action',
         'add_success_alert' => 'Lesson has been added successfully',
         'back' => 'Back',
-        'add' => 'Add'
+        'add' => 'Add',
+        'show_lesson' => 'Show lesson'
     ]
 ?>

@@ -53,7 +53,9 @@ class LessonController extends Controller
      */
     public function show($id)
     {
-        //
+        $lesson = Lesson::find($id);
+
+        return view('lesson.show', compact('lesson'));
     }
 
     /**

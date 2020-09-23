@@ -10,6 +10,7 @@
         'action' => 'hành động',
         'add_success_alert' => 'Thêm bài học thành công',
         'back' => 'Quay lại',
-        'add' => 'Thêm'
+        'add' => 'Thêm',
+        'show_lesson' => 'Chi tiết bài học'
     ]
 ?>
