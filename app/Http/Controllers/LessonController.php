@@ -66,7 +66,10 @@ class LessonController extends Controller
      */
     public function edit($id)
     {
-        //
+        $lesson = Lesson::find($id);
+        $tasks = Task::all();
+
+        return view('lesson.edit', compact('lesson', 'tasks'));
     }
 
     /**
@@ -78,7 +81,9 @@ class LessonController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        Lesson::find($id)->update($request->all());
+
+        return redirect()->route('lessons.index')->with('success', trans('lesson.update_success_alert'));
     }
 
     /**
@@ -89,6 +94,8 @@ class LessonController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Lesson::find($id)->delete();
+
+        return redirect()->route('lessons.index')->with('success', trans('lesson.delete_success_alert'));
     }
 }
