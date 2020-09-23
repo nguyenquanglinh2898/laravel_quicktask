@@ -13,10 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
-Route::resource('lessons', 'LessonController');
+Route::resources([
+    'lessons' => 'LessonController',
+    'tasks'=> 'TaskController',
+]);
 
 Route::get('change-language/{language}', 'LanguageController@index')->name('change-language');
