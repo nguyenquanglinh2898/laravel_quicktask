@@ -31,16 +31,34 @@
                     <td>{{ $lesson->task->name }}</td>
                     <td>
                         <a href="{{ route('lessons.show', [$lesson->id]) }}" class="btn btn-info">{{ trans('lesson.show') }}</a>
-                        <a href="" class="btn btn-primary">{{ trans('lesson.edit') }}</a>
-                        <form action="" method="post">
-                            <input class="btn btn-danger" type="submit" value="{{ trans('lesson.delete') }}"/>
-                            @method('delete')
-                            @csrf
-                        </form>
+                        <a href="{{ route('lessons.edit', [$lesson->id]) }}" class="btn btn-primary">{{ trans('lesson.edit') }}</a>
+                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#delete-{{ $lesson->id }}">{{ trans('lesson.delete') }}</button>
+                        <div class="modal fade" id="delete-{{ $lesson->id }}" tabindex="-1" aria-labelledby="deleteModal" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        {{ trans('lesson.comfirm_delete') }}
+                                    </div>
+                                    <div class="modal-footer">
+                                        <form method="POST" action="{{ route('lessons.destroy', [$lesson->id]) }}">
+                                            @method('DELETE')
+                                            @csrf
+                                            <input type="submit" class="btn btn-danger" value="{{ trans('lesson.yes') }}">
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">{{ trans('lesson.no') }}</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </td>
                 </tr>
             @endforeach
         </tbody>
-      </table>
+    </table>
 
 @endsection
