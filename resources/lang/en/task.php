@@ -1,0 +1,26 @@
+<?php
+    return [
+        'list_task' => 'List tasks',
+        'add_new_task' => 'Add new task',
+        'show' => 'Show detail',
+        'edit' => 'Edit',
+        'delete' => 'Delete',
+        'task_name' => 'task name',
+        'task_name' => 'Task name',
+        'action' => 'Action',
+        'add_success_alert' => 'task has been added successfully',
+        'back' => 'Back',
+        'add' => 'Add',
+        'show_task' => 'Show task',
+        'edit_task' => 'Edit task',
+        'save' => 'Save',
+        'update_success_alert' => 'task has been updated successfully',
+        'delete_success_alert' => 'task has been deleted successfully',
+        'comfirm_delete' => 'Are you sure?',
+        'yes' => 'Yes',
+        'no' => 'No',
+        'manage_task' => 'Manage tasks',
+        'name_required' => 'Task name cannot be empty',
+        'name_max' => 'Name cannot longer than :nameLeng characters',
+    ]
+?>

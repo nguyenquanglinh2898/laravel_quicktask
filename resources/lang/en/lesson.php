@@ -19,5 +19,6 @@
         'comfirm_delete' => 'Are you sure?',
         'yes' => 'Yes',
         'no' => 'No',
+        'manage_lesson' => 'Manage lessons',
     ]
 ?>

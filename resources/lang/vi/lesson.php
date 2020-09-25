@@ -19,5 +19,6 @@
         'comfirm_delete' => 'Bạn có chắc chắn muốn xóa không?',
         'yes' => 'Có',
         'no' => 'Không',
+        'manage_lesson' => 'Quản lí bài học',
     ]
 ?>
